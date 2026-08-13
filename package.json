@@ -1,4 +1,9 @@
 {
+  "name": "hospital appointment system",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server/index.js"
+  },
   "dependencies": {
     "express": "^5.2.1"
   }
