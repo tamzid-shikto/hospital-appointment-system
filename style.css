@@ -1,0 +1,1611 @@
+/* =========================
+   RESET & BASIC STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7faf9;
+    color: #243333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #edf1ef;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #263636;
+}
+
+
+/* Logo icon */
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+
+    background: #5f897f;
+
+    border-radius: 9px;
+}
+
+
+/* Medical cross */
+
+.cross-horizontal,
+.cross-vertical {
+    position: absolute;
+
+    background: white;
+
+    border-radius: 2px;
+}
+
+.cross-horizontal {
+    width: 14px;
+    height: 4px;
+
+    top: 13px;
+    left: 8px;
+}
+
+.cross-vertical {
+    width: 4px;
+    height: 14px;
+
+    top: 8px;
+    left: 13px;
+}
+
+
+/* Logo text */
+
+.logo-text {
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.8px;
+
+    color: #263b38;
+}
+
+.logo-text span {
+    color: #5f897f;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #687575;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #243d3a;
+}
+
+.nav-links a.active {
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -10px;
+
+    width: 5px;
+    height: 5px;
+
+    transform: translateX(-50%);
+
+    background: #456f67;
+    border-radius: 50%;
+}
+
+
+/* Navbar buttons */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-btn {
+    font-size: 14px;
+    color: #293636;
+}
+
+.get-started-btn {
+    padding: 11px 18px;
+
+    background: #eef5f2;
+    color: #41645e;
+
+    border-radius: 22px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    border: 1px solid #e0ebe7;
+
+    transition: 0.3s;
+}
+
+.get-started-btn:hover {
+    background: #e2eeea;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    width: 92%;
+    min-height: 610px;
+
+    margin: 28px auto 0;
+
+    display: flex;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #729b91 0%,
+            #9fc7b9 42%,
+            #e5f1ec 72%,
+            #f8fbfa 100%
+        );
+}
+
+
+/* =========================
+   HERO LEFT CONTENT
+========================= */
+
+.hero-content {
+    width: 48%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 70px 5%;
+
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Small badge */
+
+.hero-badge {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 14px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    font-size: 13px;
+}
+
+.hero-badge span {
+    font-size: 14px;
+}
+
+
+/* Hero heading */
+
+.hero-content h1 {
+    max-width: 600px;
+
+    font-size: clamp(48px, 5vw, 72px);
+
+    line-height: 1.02;
+
+    font-weight: 400;
+
+    letter-spacing: -2.5px;
+
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    display: block;
+
+    font-style: italic;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: 400;
+}
+
+
+/* Hero paragraph */
+
+.hero-content > p {
+    max-width: 470px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    margin-bottom: 32px;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 22px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: white;
+    color: #42675f;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    gap: 10px;
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   HERO RIGHT VISUAL
+========================= */
+
+.hero-visual {
+    width: 52%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 65%
+        );
+}
+
+
+/* =========================
+   SCHEDULE CARD
+========================= */
+
+.schedule-card {
+    width: 380px;
+
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 24px;
+
+    box-shadow: 0 25px 60px rgba(40, 70, 65, 0.15);
+
+    position: relative;
+    z-index: 3;
+}
+
+
+/* Doctor */
+
+.schedule-doctor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-bottom: 22px;
+
+    margin-bottom: 22px;
+
+    border-bottom: 1px solid #edf1ef;
+}
+
+/* Doctor information */
+
+.doctor-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+.doctor-avatar {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #d7e8e2;
+
+    color: #456b63;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.doctor-name {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #31413f;
+
+    margin-bottom: 4px;
+}
+
+.doctor-specialty {
+    font-size: 11px;
+
+    color: #82908d;
+}
+
+
+/* Appointment information */
+
+.appointment-card h3 {
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #41665e;
+
+    margin-bottom: 9px;
+}
+
+.appointment-description {
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #7d8987;
+
+    margin-bottom: 25px;
+}
+
+
+/* Appointment details */
+
+.appointment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #edf1ef;
+}
+
+.appointment-details span {
+    font-size: 11px;
+
+    color: #7b8885;
+}
+
+
+/* =========================
+   CALENDAR
+========================= */
+
+.calendar-card {
+    position: absolute;
+
+    right: 4%;
+    top: 15%;
+
+    width: 330px;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(40, 70, 65, 0.12);
+}
+
+
+/* Calendar header */
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.calendar-header h3 {
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #374542;
+}
+
+.calendar-header button {
+    width: 28px;
+    height: 28px;
+
+    border: none;
+
+    background: #f1f6f4;
+
+    color: #687774;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+/* Weekdays */
+
+.weekdays,
+.calendar-days {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    text-align: center;
+}
+
+.weekdays {
+    margin-bottom: 12px;
+}
+
+.weekdays span {
+    font-size: 9px;
+
+    color: #9aa6a3;
+
+    font-weight: 600;
+}
+
+
+/* Calendar days */
+
+.calendar-days {
+    row-gap: 8px;
+}
+
+.calendar-days span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+    color: #566561;
+}
+
+.calendar-days .available {
+    background: #e1f0eb;
+
+    color: #3e6b61;
+
+    font-weight: 600;
+}
+
+.calendar-days .selected {
+    background: #527b70;
+
+    color: white;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   TIME SLOTS
+========================= */
+
+.time-slots {
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #edf1ef;
+}
+
+.time-slots p {
+    font-size: 11px;
+
+    color: #7e8986;
+
+    margin-bottom: 10px;
+}
+
+.slots {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.slots span {
+    padding: 7px 10px;
+
+    background: #f1f6f4;
+
+    border-radius: 8px;
+
+    color: #527169;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+
+    padding: 70px 5% 25px;
+
+    background: #e0f5ec;
+
+    color: #52625e;
+}
+
+
+/* Main footer */
+
+.footer-main {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.3fr;
+
+    gap: 60px;
+
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid #d8e5e1;
+}
+
+
+/* Brand */
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-brand .logo {
+    margin-bottom: 18px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #7a8985;
+}
+
+
+/* Footer columns */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-column h3 {
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #344642;
+}
+
+.footer-column a,
+.footer-column p {
+    font-size: 12px;
+
+    color: #7a8985;
+
+    transition: 0.25s;
+}
+
+.footer-column a:hover {
+    color: #4f796e;
+
+    transform: translateX(2px);
+}
+
+
+/* Bottom */
+
+.footer-bottom {
+    max-width: 1200px;
+
+    margin: 22px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    font-size: 11px;
+
+    color: #8b9895;
+}
+
+
+/* Social links */
+
+.footer-socials {
+    display: flex;
+
+    gap: 20px;
+}
+
+.footer-socials a {
+    font-size: 11px;
+
+    color: #7a8985;
+
+    transition: 0.25s;
+}
+
+.footer-socials a:hover {
+    color: #4f796e;
+}
+
+
+/* =========================
+   FOOTER RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        min-height: 900px;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        min-height: 450px;
+
+        padding: 60px 8%;
+    }
+
+    .hero-visual {
+        width: 100%;
+
+        min-height: 450px;
+    }
+
+    .appointment-card {
+        left: 10%;
+    }
+
+    .calendar-card {
+        right: 8%;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        width: 94%;
+
+        margin-top: 15px;
+
+        border-radius: 20px;
+    }
+
+    .hero-content {
+        padding: 50px 8%;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .hero-visual {
+        min-height: 600px;
+    }
+
+    .appointment-card {
+        width: 80%;
+
+        left: 10%;
+        top: 5%;
+    }
+
+    .calendar-card {
+        width: 80%;
+
+        right: 10%;
+        top: 50%;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .login-btn {
+        display: none;
+    }
+}
+
+/* =========================
+   WHY MEDCORE
+========================= */
+
+.why-medcore {
+    width: 100%;
+
+    padding: 100px 5%;
+
+    text-align: center;
+
+    background: #def2eb;
+}
+
+
+/* Section heading */
+
+.section-heading {
+    max-width: 600px;
+
+    margin: 0 auto 50px;
+}
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #5f897f;
+}
+
+.section-heading h2 {
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    font-weight: 400;
+
+    letter-spacing: -1.5px;
+
+    color: #263b38;
+
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-style: italic;
+
+    color: #6f938b;
+}
+
+.section-heading p {
+    max-width: 500px;
+
+    margin: auto;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #7b8885;
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    max-width: 1100px;
+    margin: auto;
+}
+
+.feature-card {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 30px;
+
+    text-align: left;
+
+    background: #ffffff;
+
+    border: 1px solid #e1ebe7;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    transition: all 0.35s ease;
+}
+
+.feature-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    right: -45px;
+    bottom: -50px;
+
+    border-radius: 50%;
+
+    background: #edf6f2;
+
+    transition: 0.35s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(55, 90, 82, 0.12);
+
+    border-color: #cbded8;
+}
+
+.feature-card:hover::after {
+    transform: scale(1.3);
+}
+
+
+/* Top row */
+
+.feature-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.feature-number {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #a2b2ae;
+}
+
+
+/* Icon */
+
+.feature-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #e8f3ef;
+
+    color: #578278;
+
+    font-size: 22px;
+
+    box-shadow: 0 8px 18px rgba(70, 110, 100, 0.08);
+}
+
+
+/* Accent line */
+
+.feature-line {
+    width: 35px;
+    height: 3px;
+
+    margin-bottom: 20px;
+
+    border-radius: 5px;
+
+    background: #6f978c;
+}
+
+
+/* Heading */
+
+.feature-card h3 {
+    max-width: 240px;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+
+    line-height: 1.25;
+
+    font-weight: 600;
+
+    color: #2e403c;
+}
+
+
+/* Description */
+
+.feature-card p {
+    max-width: 270px;
+
+    margin-bottom: 22px;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    color: #7a8884;
+}
+
+
+/* Link */
+
+.feature-link {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #527a70;
+
+    transition: 0.3s;
+}
+
+.feature-link span {
+    transition: 0.3s;
+}
+
+.feature-link:hover span {
+    transform: translateX(4px);
+}
+
+.tiny
+{
+    font-size: 30px;
+}
+
+/* =========================
+   MEDICAL SPECIALTIES
+========================= */
+
+.specialties {
+    width: 100%;
+
+    max-width: none;
+
+    margin: 0;
+
+    padding: 100px 5%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+    135deg,
+    #d7e8e2 0%,
+    #c5ddd5 50%,
+    #e9f2ef 100%
+);
+}
+
+/* Header */
+
+.specialties-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+.section-label{
+    font-size: 18px;
+}
+
+.specialties-header h2 {
+    margin-top: 10px;
+
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    letter-spacing: -1.8px;
+
+    color: #263b38;
+}
+
+.specialties-header h2 span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-style: italic;
+
+    color: #6f938b;
+}
+
+.specialties-header > p {
+    max-width: 310px;
+
+    margin-bottom: 5px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #7b8885;
+}
+
+
+/* Specialty grid */
+
+.specialty-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+
+/* Specialty card */
+
+.specialty-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 115px;
+
+    padding: 20px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4ece9;
+
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+.specialty-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cbded8;
+
+    box-shadow: 0 15px 35px rgba(55, 90, 82, 0.09);
+}
+
+
+/* Icon */
+
+.specialty-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #e0f6ed;
+
+    color: #5f897f;
+
+    font-size: 20px;
+}
+
+
+/* Information */
+
+.specialty-info {
+    padding-right: 25px;
+}
+
+.specialty-info h3 {
+    margin-bottom: 5px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #344542;
+}
+
+.specialty-info p {
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #899490;
+}
+
+
+/* Arrow */
+
+.specialty-arrow {
+    position: absolute;
+
+    right: 18px;
+    top: 18px;
+
+    font-size: 15px;
+
+    color: #9aaaa6;
+
+    transition: 0.3s;
+}
+
+.specialty-card:hover .specialty-arrow {
+    color: #527a70;
+
+    transform: translate(2px, -2px);
+}
+
+
+/* Footer link */
+
+.specialties-footer {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 35px;
+}
+
+.view-specialties {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 11px 18px;
+
+    border: 1px solid #dce7e3;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #527a70;
+
+    transition: 0.3s;
+}
+
+.view-specialties:hover {
+    background: #edf5f2;
+
+    border-color: #cbded8;
+}
+
+.view-specialties span {
+    transition: 0.3s;
+}
+
+.view-specialties:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   SPECIALTIES RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .specialty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .specialties-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .specialty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specialties-header h2 {
+        font-size: 40px;
+    }
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+
+.cta-section {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 100px auto;
+
+    padding: 80px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background: linear-gradient(
+        135deg,
+        #527b70 0%,
+        #416b61 55%,
+        #34594f 100%
+    );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Decorative glow */
+
+.cta-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    top: -140px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.cta-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    bottom: -130px;
+    left: -60px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+/* Content */
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 650px;
+}
+
+.cta-content .section-label {
+    color: #cce2db;
+
+    margin-bottom: 16px;
+}
+
+.cta-content h2 {
+    margin-bottom: 18px;
+
+    font-size: 48px;
+
+    line-height: 1.08;
+
+    font-weight: 400;
+
+    letter-spacing: -1.5px;
+
+    color: white;
+}
+
+.cta-content h2 span {
+    display: block;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-style: italic;
+
+    color: #d8ebe5;
+}
+
+.cta-content p {
+    max-width: 480px;
+
+    margin: 0 auto 30px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* CTA button */
+
+.cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    background: white;
+
+    color: #456f65;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cta-button span {
+    transition: 0.3s;
+}
+
+.cta-button:hover span {
+    transform: translateX(4px);
+}
