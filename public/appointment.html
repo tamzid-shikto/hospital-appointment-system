@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | MedCore</title>
+
+    <link rel="stylesheet" href="appointment.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">+</span>
+            <span>medcore</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="doctors.html">Doctors</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="signin.html" class="sign-in">Sign in</a>
+            <a href="appointment.html" class="get-started">Get Started</a>
+        </div>
+
+    </header>
+
+
+    <!-- Appointment Page -->
+    <main class="appointment-page">
+
+        <!-- Page Heading -->
+        <section class="appointment-heading">
+
+            <span class="eyebrow">✦ Book your visit</span>
+
+            <h1>
+                Schedule your
+                <em>appointment</em>
+            </h1>
+
+            <p>
+                Choose a doctor, select a convenient date and time
+                and book your visit with MedCore.
+            </p>
+
+        </section>
+
+
+        <!-- Appointment Content -->
+        <section class="appointment-container">
+
+            <!-- Left Side -->
+            <div class="appointment-info">
+
+                <h2>
+                    Your health,<br>
+                    our priority.
+                </h2>
+
+                <p>
+                    Get connected with trusted healthcare professionals
+                    and choose an appointment time that works for you.
+                </p>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">✓</div>
+
+                    <div>
+                        <h3>Trusted Doctors</h3>
+                        <p>Experienced healthcare professionals.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">✓</div>
+
+                    <div>
+                        <h3>Flexible Scheduling</h3>
+                        <p>Choose a date and time that suits you.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">✓</div>
+
+                    <div>
+                        <h3>Easy Booking</h3>
+                        <p>Book your appointment in just a few steps.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Side: Appointment Form -->
+            <div class="appointment-card">
+
+                <div class="card-header">
+
+                    <h2>Book an Appointment</h2>
+
+                    <p>
+                        Fill in your details to schedule your visit.
+                    </p>
+
+                </div>
+
+
+                <form>
+
+                    <!-- Name -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+
+                            <input
+                                type="text"
+                                id="first-name"
+                                placeholder="Enter your first name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+
+                            <input
+                                type="text"
+                                id="last-name"
+                                placeholder="Enter your last name"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="you@example.com"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter your phone number"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- Specialty -->
+                    <div class="form-group">
+
+                        <label for="specialty">
+                            Medical Specialty
+                        </label>
+
+                        <select id="specialty" required>
+
+                            <option value="">Select a specialty</option>
+
+                            <option value="cardiology">Cardiology</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="dermatology">Dermatology</option>
+                            <option value="pediatrics">Pediatrics</option>
+                            <option value="orthopedics">Orthopedics</option>
+                            <option value="general-medicine">General Medicine</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Doctor -->
+                    <div class="form-group">
+
+                        <label for="doctor">
+                            Select Doctor
+                        </label>
+
+                        <select id="doctor" required disabled>
+
+                            <option value="">
+                                Select a specialty first
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Date and Time -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="date">
+                                Preferred Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="date"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="time">
+                                Preferred Time
+                            </label>
+
+                            <select id="time" required disabled>
+                                <option value="">Select a doctor and date first</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Reason -->
+                    <div class="form-group">
+
+                        <label for="reason">
+                            Reason for Visit
+                        </label>
+
+                        <textarea
+                            id="reason"
+                            rows="4"
+                            placeholder="Briefly describe the reason for your visit"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="book-button"
+                    >
+                        Confirm Appointment
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 MedCore. All rights reserved.</p>
+    </footer>
+
+    <script>
+    const specialtySelect = document.getElementById("specialty");
+    const doctorSelect = document.getElementById("doctor");
+    const dateInput = document.getElementById("date");
+    const timeSelect = document.getElementById("time");
+    const appointmentForm = document.querySelector("form");
+
+    const API_URL =
+        "https://hospital-appointment-system-cpyl.onrender.com/api/doctors";
+
+    let doctors = [];
+
+
+    // =========================
+    // LOAD DOCTORS FROM API
+    // =========================
+
+    async function loadDoctors() {
+
+        try {
+
+            const response = await fetch(API_URL);
+
+            if (!response.ok) {
+                throw new Error("Failed to load doctors");
+            }
+
+            const result = await response.json();
+
+            if (!result.success) {
+                throw new Error("API returned an error");
+            }
+
+            // Keep only the 32 doctors used by our frontend.
+            doctors = result.data.slice(6);
+
+            console.log("Doctors loaded:", doctors);
+
+        } catch (error) {
+
+            console.error("Error loading doctors:", error);
+
+            alert("Unable to load doctors. Please try again.");
+
+        }
+
+    }
+
+
+    async function loadAvailability() {
+
+    const doctorId = doctorSelect.value;
+    const date = dateInput.value;
+
+    timeSelect.innerHTML = "";
+
+    if (!doctorId || !date) {
+        timeSelect.disabled = true;
+
+        const option = document.createElement("option");
+        option.value = "";
+        option.textContent = "Select a doctor and date first";
+
+        timeSelect.appendChild(option);
+
+        return;
+    }
+
+    try {
+        timeSelect.disabled = true;
+
+        const response = await fetch(
+            `${API_URL}/${doctorId}/availability?date=${date}`
+        );
+
+        if (!response.ok) {
+            throw new Error("Failed to load availability");
+        }
+
+        const result = await response.json();
+
+        console.log("Available slots:", result);
+
+        timeSelect.innerHTML = "";
+
+        const defaultOption = document.createElement("option");
+        defaultOption.value = "";
+        defaultOption.textContent = "Choose a time";
+
+        timeSelect.appendChild(defaultOption);
+
+        result.data.slots.forEach(function(slot) {
+
+            const option = document.createElement("option");
+
+            option.value = slot;
+            option.textContent = slot;
+
+            timeSelect.appendChild(option);
+
+        });
+
+        timeSelect.disabled = false;
+
+    } catch (error) {
+
+        console.error("Availability error:", error);
+
+        timeSelect.innerHTML = "";
+
+        const option = document.createElement("option");
+        option.value = "";
+        option.textContent = "Unable to load available times";
+
+        timeSelect.appendChild(option);
+    }
+}
+
+    // =========================
+    // SPECIALTY → DOCTOR
+    // =========================
+
+    specialtySelect.addEventListener("change", function () {
+
+        const selectedSpecialty = this.value;
+
+        doctorSelect.innerHTML = "";
+
+        if (selectedSpecialty === "") {
+
+            doctorSelect.disabled = true;
+
+            const option = document.createElement("option");
+
+            option.textContent = "Select a specialty first";
+            option.value = "";
+
+            doctorSelect.appendChild(option);
+
+            return;
+        }
+
+
+        doctorSelect.disabled = false;
+
+
+        const defaultOption = document.createElement("option");
+
+        defaultOption.textContent = "Choose a doctor";
+        defaultOption.value = "";
+
+        doctorSelect.appendChild(defaultOption);
+
+
+        // Find doctors belonging to selected specialty
+        const filteredDoctors = doctors.filter(
+            doctor =>
+                doctor.specialization === selectedSpecialty
+        );
+
+
+        filteredDoctors.forEach(function (doctor) {
+
+            const option = document.createElement("option");
+
+            option.textContent = doctor.name;
+
+            // IMPORTANT:
+            // The value is now the Firebase doctor ID,
+            // not the doctor's name.
+            option.value = doctor.doctorId;
+
+            doctorSelect.appendChild(option);
+
+        });
+
+    });
+
+
+    // Load doctors when page opens
+    loadDoctors();
+
+    doctorSelect.addEventListener("change", loadAvailability);
+    dateInput.addEventListener("change", loadAvailability);
+
+    appointmentForm.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const doctorId = doctorSelect.value;
+    const date = dateInput.value;
+    const time = timeSelect.value;
+
+    if (!doctorId || !date || !time) {
+        alert("Please select a doctor, date and time.");
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            "https://hospital-appointment-system-cpyl.onrender.com/api/appointments",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    doctorId: doctorId,
+                    date: date,
+                    time: time
+                })
+            }
+        );
+
+        const result = await response.json();
+
+        console.log("Appointment response:", result);
+
+        if (!response.ok) {
+            throw new Error(result.message || "Booking failed");
+        }
+
+        alert("Appointment booked successfully!");
+
+        appointmentForm.reset();
+
+        doctorSelect.innerHTML =
+            '<option value="">Select a specialty first</option>';
+
+        doctorSelect.disabled = true;
+
+        timeSelect.innerHTML =
+            '<option value="">Select a doctor and date first</option>';
+
+        timeSelect.disabled = true;
+
+    } catch (error) {
+
+        console.error("Booking error:", error);
+
+        alert(error.message);
+    }
+
+});
+
+</script>
+
+</body>
+</html>
