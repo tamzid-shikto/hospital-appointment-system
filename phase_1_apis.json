@@ -1,0 +1,177 @@
+{
+  "phase": 1,
+  "name": "Basic Appointment Prototype",
+  "base_url": "/api",
+  "apis": [
+    {
+      "method": "POST",
+      "path": "/auth/register",
+      "description": "Register a new patient",
+      "request": {
+        "body": {
+          "name": "John Doe",
+          "email": "john@example.com",
+          "password": "password123"
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": {
+          "success": true,
+          "message": "User registered successfully",
+          "data": {
+            "userId": "usr_001",
+            "name": "John Doe",
+            "email": "john@example.com"
+          }
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/auth/login",
+      "description": "Authenticate a user",
+      "request": {
+        "body": {
+          "email": "john@example.com",
+          "password": "password123"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "message": "Login successful",
+          "data": {
+            "userId": "usr_001",
+            "token": "jwt_token"
+          }
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/doctors",
+      "description": "Get all available doctors",
+      "response": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": [
+            {
+              "doctorId": "doc_001",
+              "name": "Dr. Smith",
+              "specialization": "Cardiology"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/doctors/{doctorId}",
+      "description": "Get details of a specific doctor",
+      "response": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "doctorId": "doc_001",
+            "name": "Dr. Smith",
+            "specialization": "Cardiology"
+          }
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/doctors/{doctorId}/availability",
+      "description": "Get available appointment slots",
+      "request": {
+        "query": {
+          "date": "2026-08-20"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "doctorId": "doc_001",
+            "date": "2026-08-20",
+            "slots": [
+              "09:00",
+              "09:30",
+              "10:00",
+              "10:30"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/appointments",
+      "description": "Book an appointment",
+      "request": {
+        "body": {
+          "doctorId": "doc_001",
+          "date": "2026-08-20",
+          "time": "09:00"
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": {
+          "success": true,
+          "message": "Appointment booked successfully",
+          "data": {
+            "appointmentId": "apt_001",
+            "doctorId": "doc_001",
+            "date": "2026-08-20",
+            "time": "09:00",
+            "status": "pending"
+          }
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/appointments",
+      "description": "Get appointments of the authenticated patient",
+      "response": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": [
+            {
+              "appointmentId": "apt_001",
+              "doctorId": "doc_001",
+              "date": "2026-08-20",
+              "time": "09:00",
+              "status": "pending"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/{appointmentId}",
+      "description": "Get details of an appointment",
+      "response": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "appointmentId": "apt_001",
+            "doctorId": "doc_001",
+            "date": "2026-08-20",
+            "time": "09:00",
+            "status": "pending"
+          }
+        }
+      }
+    }
+  ]
+}
