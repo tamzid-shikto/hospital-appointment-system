@@ -1,30 +1,300 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MedCore | Contact</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="navbar"><div class="logo"><div class="logo-icon"><span class="cross-horizontal"></span><span class="cross-vertical"></span></div><span class="logo-text">med<span>core</span></span></div>
- <nav class="nav-links">
-            <a href="index.html" class="">Home</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MedCore | Contact</title>
+
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <span class="cross-horizontal"></span>
+                <span class="cross-vertical"></span>
+            </div>
+
+            <span class="logo-text">
+                med<span>core</span>
+            </span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
             <a href="doctors.html">Doctors</a>
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
             <a href="contact.html" class="active">Contact</a>
             <a href="faq.html">FAQ</a>
-            
         </nav>
-<div class="nav-actions"><a href="signin.html" class="login-btn">Sign in</a><a href="appointment.html" class="get-started-btn">Get Started</a></div></header>
-<main>
-<section class="hero"><div class="hero-content"><div class="hero-badge"><span>✦</span>CONTACT</div><h1>We're here to <span>help.</span></h1></div></section>
-<section class="why-medcore"><div class="features">
-<div class="feature-card"><h3>Address</h3><p>Rajshahi, Bangladesh</p></div>
-<div class="feature-card"><h3>Phone</h3><p>+880 1234 567890</p></div>
-<div class="feature-card"><h3>Email</h3><p>hello@medcore.com</p></div>
-</div></section>
-<section class="specialties"><form class="schedule-card">
-<p><input style="width:100%;padding:10px" placeholder="Full Name"></p><br>
-<p><input style="width:100%;padding:10px" placeholder="Email"></p><br>
-<p><input style="width:100%;padding:10px" placeholder="Subject"></p><br>
-<p><textarea style="width:100%;height:150px;padding:10px" placeholder="Message"></textarea></p><br>
-<a href="#" class="primary-btn">Send Message</a>
-</form></section></main>
-<footer class="footer"><div class="footer-bottom"><p>© 2026 MedCore. All rights reserved.</p></div></footer>
-</body></html>
+
+        <div class="nav-actions">
+            <a href="signin.html" class="login-btn">Sign in</a>
+            <a href="appointment.html" class="get-started-btn">
+                Get Started
+            </a>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero -->
+        <section class="contact-hero">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    <span>✦</span> CONTACT
+                </span>
+
+                <h1>
+                    We're here to
+                    <span>help.</span>
+                </h1>
+
+                <p>
+                    Have a question or need assistance?
+                    Reach out to the MedCore team and we'll be happy to help.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact Information -->
+        <section class="contact-info-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    GET IN TOUCH
+                </span>
+
+                <h2>
+                    We'd love to
+                    <span>hear from you.</span>
+                </h2>
+
+                <p>
+                    Whether you have a question about our services,
+                    appointments, or anything else, our team is ready to help.
+                </p>
+
+            </div>
+
+
+            <div class="contact-cards">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">⌖</div>
+
+                    <div>
+                        <span>Address</span>
+                        <h3>Rajshahi, Bangladesh</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">☎</div>
+
+                    <div>
+                        <span>Phone</span>
+                        <h3>+880 1234 567890</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">@</div>
+
+                    <div>
+                        <span>Email</span>
+                        <h3>hello@medcore.com</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact Form -->
+        <section class="form-section">
+
+            <div class="form-wrapper">
+
+                <div class="form-intro">
+
+                    <span class="section-label">
+                        SEND A MESSAGE
+                    </span>
+
+                    <h2>
+                        Let's start a
+                        <span>conversation.</span>
+                    </h2>
+
+                    <p>
+                        Fill out the form and send us your message.
+                        We'll get back to you as soon as possible.
+                    </p>
+
+                </div>
+
+
+                <form class="contact-form">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="fullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="What can we help you with?"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="send-button">
+                        Send Message
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 MedCore. All rights reserved.
+        </p>
+
+    </footer>
+
+    <script>
+    const contactForm = document.querySelector(".contact-form");
+
+    contactForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("fullName").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        try {
+            const response = await fetch(
+                "https://hospital-appointment-system-cpyl.onrender.com/api/contact",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (response.ok) {
+                alert("Your message has been sent successfully!");
+                contactForm.reset();
+
+                console.log("Contact response:", result);
+            } else {
+                alert(result.message || "Unable to send your message.");
+            }
+
+        } catch (error) {
+            console.error("Contact error:", error);
+            alert("Unable to connect to the server.");
+        }
+    });
+</script>
+
+</body>
+
+</html>

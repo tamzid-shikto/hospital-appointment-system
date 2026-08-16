@@ -313,4 +313,48 @@ router.get("/appointments/:appointmentId", async (req, res) => {
   }
 });
 
+router.post("/contact", async (req, res) => {
+  try {
+    const { name, email, subject, message } = req.body;
+
+    if (!name || !email || !subject || !message) {
+      return res.status(400).json({
+        success: false,
+        message: "Name, email, subject and message are required"
+      });
+    }
+
+    const contactData = {
+      name,
+      email,
+      subject,
+      message,
+      createdAt: new Date().toISOString()
+    };
+
+    const result = await PushDatabase(
+      "contacts",
+      contactData
+    );
+
+    res.status(201).json({
+      success: true,
+      message: "Message sent successfully",
+      data: {
+        contactId: result.name,
+        name,
+        email,
+        subject,
+        message
+      }
+    });
+
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: err.message
+    });
+  }
+});
+
 module.exports = router;
