@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edf5f2;
+    color: #244642;
+    min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    min-height: 78px;
+    background: #ffffff;
+    border-top: 2px solid #303030;
+    border-bottom: 1px solid #e2ebe8;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    color: #204541;
+}
+
+.logo-icon {
+    width: 33px;
+    height: 33px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #66938b;
+    color: white;
+
+    border-radius: 9px;
+
+    position: relative;
+}
+
+.cross-horizontal,
+.cross-vertical {
+    position: absolute;
+    background: white;
+    border-radius: 2px;
+}
+
+.cross-horizontal {
+    width: 16px;
+    height: 4px;
+}
+
+.cross-vertical {
+    width: 4px;
+    height: 16px;
+}
+
+.logo-text {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.logo-text span {
+    font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #304b49;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #66938b;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-btn,
+.get-started-btn {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-btn {
+    color: #304b49;
+}
+
+.get-started-btn {
+    padding: 11px 20px;
+    border-radius: 25px;
+
+    background: #f0f6f4;
+    border: 1px solid #dce9e6;
+
+    color: #304b49;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 8%;
+
+    background:
+        radial-gradient(circle at 85% 35%, #d9ebe6 0, transparent 30%),
+        #edf5f2;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-badge,
+.section-label {
+    display: inline-block;
+
+    color: #557e77;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero-badge {
+    padding: 8px 15px;
+    border: 1px solid #b9d0cb;
+    border-radius: 20px;
+    margin-bottom: 22px;
+}
+
+.hero-badge span {
+    margin-right: 6px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.08;
+    font-weight: 500;
+    color: #254b47;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.specialties-header h2 span,
+.cta-content h2 span {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #66938b;
+}
+
+.hero-content > p {
+    max-width: 580px;
+    margin-top: 22px;
+
+    color: #71827f;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+    padding: 13px 21px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: #5f8e85;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #4f7c74;
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    background: white;
+    color: #4f756e;
+    border: 1px solid #cfe0dc;
+}
+
+.secondary-btn:hover {
+    border-color: #66938b;
+}
+
+.secondary-btn span {
+    margin-left: 8px;
+}
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-visual {
+    width: 370px;
+}
+
+.schedule-card {
+    padding: 34px;
+
+    background: white;
+    border: 1px solid #dce8e5;
+    border-radius: 22px;
+
+    box-shadow: 0 20px 45px rgba(55, 91, 86, 0.10);
+}
+
+.schedule-card h2 {
+    margin-bottom: 16px;
+    color: #345;
+    font-size: 24px;
+}
+
+.schedule-card p {
+    color: #71827f;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* =========================
+   OUR STORY
+========================= */
+
+.why-medcore {
+    padding: 90px 8%;
+    background: #ffffff;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    margin-top: 10px;
+    font-size: 42px;
+    font-weight: 500;
+    color: #254b47;
+}
+
+.section-heading p {
+    margin-top: 15px;
+    color: #71827f;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 28px;
+
+    background: #f7fbfa;
+    border: 1px solid #dce8e5;
+    border-radius: 18px;
+
+    transition: 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(55, 91, 86, 0.08);
+}
+
+.feature-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature-number {
+    color: #9aafaa;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.feature-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #dcece8;
+    color: #5f8e85;
+}
+
+.feature-line {
+    width: 35px;
+    height: 2px;
+    background: #8eafa8;
+
+    margin: 25px 0 18px;
+}
+
+.feature-card h3 {
+    color: #31544f;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #71827f;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* =========================
+   IMPACT
+========================= */
+
+.specialties {
+    padding: 90px 8%;
+    background: #edf5f2;
+}
+
+.specialties-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 35px;
+}
+
+.specialties-header h2 {
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #254b47;
+}
+
+.specialties-header > p {
+    max-width: 300px;
+    color: #71827f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.specialty-card {
+    min-height: 145px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 25px;
+
+    background: white;
+    border: 1px solid #dce8e5;
+    border-radius: 16px;
+}
+
+.specialty-info h3 {
+    font-size: 30px;
+    color: #5f8e85;
+    margin-bottom: 7px;
+}
+
+.specialty-info p {
+    color: #71827f;
+    font-size: 14px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section {
+    padding: 90px 8%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.cta-content h2 {
+    margin-top: 12px;
+    font-size: 42px;
+    font-weight: 500;
+    color: #254b47;
+}
+
+.cta-content p {
+    margin: 16px auto 25px;
+
+    max-width: 520px;
+
+    color: #71827f;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 23px;
+
+    background: #5f8e85;
+    color: white;
+
+    border-radius: 11px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.cta-button:hover {
+    background: #4f7c74;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 24px 7%;
+
+    background: #ffffff;
+    border-top: 1px solid #dfe9e6;
+
+    text-align: center;
+
+    color: #71827f;
+    font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 45px;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .specialty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-actions {
+        margin-left: auto;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+    }
+
+    .why-medcore,
+    .specialties,
+    .cta-section {
+        padding: 65px 6%;
+    }
+
+    .section-heading h2,
+    .specialties-header h2,
+    .cta-content h2 {
+        font-size: 34px;
+    }
+
+    .specialties-header {
+        display: block;
+    }
+
+    .specialties-header > p {
+        margin-top: 12px;
+    }
+
+    .specialty-grid {
+        grid-template-columns: 1fr;
+    }
+}
